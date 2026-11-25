@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.icns binary
+*.zip binary
+# Preserve the original CRLF line endings in this test source.
+app/Tests/ExplorerAppTests/HoverFeedbackTests.swift -text

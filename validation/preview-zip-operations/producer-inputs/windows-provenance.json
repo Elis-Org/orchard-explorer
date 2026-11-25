@@ -1,0 +1,7 @@
+{
+  "archive": "windows-explorer-updated.zip",
+  "sha256": "0154af56faed4b1c0ffd2a8eb0eb135c0f81a4aa5cabe332896ad9eb7e549389",
+  "bytes": 816,
+  "producer": "Original Python fixture subsequently mutated by observed Windows Explorer compressed-folder operations; this is a Windows Explorer-updated ZIP, not a claim of wholly Explorer-created original records.",
+  "targetMember": "add-me.txt"
+}
