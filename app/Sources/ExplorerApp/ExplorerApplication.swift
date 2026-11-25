@@ -99,7 +99,7 @@ final class ExplorerAppDelegate: NSObject, NSApplicationDelegate, NSWindowDelega
     }
 
     /// MAC-082: other applications (open -a, Open With, a Finder replacement's
-    /// "Show in Finder") ask Maxplorer to open items.
+    /// "Show in Finder") ask Orchard Explorer to open items.
     func application(_ application: NSApplication, open urls: [URL]) {
         guard hasFinishedLaunching else { launchOpenRequests += urls; return }
         handleOpenRequest(urls)
@@ -113,7 +113,7 @@ final class ExplorerAppDelegate: NSObject, NSApplicationDelegate, NSWindowDelega
     }
 
     /// Folders open in new tabs and items are revealed (selected in their folder's
-    /// tab) in the frontmost Maxplorer window, or in a new window when none is open.
+    /// tab) in the frontmost Orchard Explorer window, or in a new window when none is open.
     private func present(_ plan: OpenRequestPlan) {
         var targets = plan.targets
         if targets.isEmpty {
@@ -163,7 +163,7 @@ final class ExplorerAppDelegate: NSObject, NSApplicationDelegate, NSWindowDelega
         return ordered
     }
 
-    /// The key or main window's store, else the frontmost Maxplorer window's (the app
+    /// The key or main window's store, else the frontmost Orchard Explorer window's (the app
     /// may be inactive when a request arrives).
     private var frontmostStore: ExplorerStore? {
         if let currentStore { return currentStore }

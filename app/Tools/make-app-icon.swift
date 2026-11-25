@@ -1,4 +1,4 @@
-// MAC-081 — Maxplorer application icon generator (original artwork).
+// MAC-081 — Orchard Explorer application icon generator (original artwork).
 //
 // Draws a manila folder with a blue band on a light macOS rounded-square tile,
 // evoking (not reproducing) the yellow-folder File Explorer identity. No Windows

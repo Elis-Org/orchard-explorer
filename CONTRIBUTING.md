@@ -1,4 +1,4 @@
-# Contributing to Maxplorer
+# Contributing to Orchard Explorer
 
 Build and test on an Apple Silicon Mac running macOS 26.7.1 or later. Install the Xcode Command Line Tools and run the commands below from the repository root. The first Swift package build fetches ZIPFoundation 0.9.20.
 
@@ -9,7 +9,7 @@ The ZIP tests exercise archives produced by Windows Explorer and the Mac’s `di
 ```sh
 (
   set -e
-  run_dir="$(mktemp -d "${TMPDIR:-/tmp}/maxplorer-tests.XXXXXX")"
+  run_dir="$(mktemp -d "${TMPDIR:-/tmp}/orchard-explorer-tests.XXXXXX")"
   python3 -B validation/preview-zip-operations/make-producer-corpus.py \
     --output "$run_dir/producer-corpus" \
     --windows-input validation/preview-zip-operations/producer-inputs/windows-explorer-updated.zip

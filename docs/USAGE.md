@@ -1,8 +1,8 @@
-# Using Maxplorer
+# Using Orchard Explorer
 
 ## Navigate and find files
 
-Launching Maxplorer opens **Home**, with Quick access and Recent. If you open a specific folder from Finder, Maxplorer opens that folder.
+Launching Orchard Explorer opens **Home**, with Quick access and Recent. If you open a specific folder from Finder, Orchard Explorer opens that folder.
 
 | Action | How |
 | --- | --- |
@@ -21,15 +21,15 @@ In **Home → Tags → More tags**, check the tags you want to see. Home shows o
 
 In **Home → Recent** and **Home → Tags**, click once to select a file and show it in the open Details or Preview pane. Control-click or Command-click toggles individual rows. Shift-click selects a range, including rows in adjacent tag groups. If you select the same file under two tags, the inspector counts it once. Double-click to open a file or folder. Right-click or press Shift-F10 for the same file menu used in folders. **Open With** applies to a single eligible file. **Compress to** and **Make Alias** place their output beside the selected items when they share a physical folder.
 
-You can copy, cut, rename, drag or move selected files to the Trash from either list. A file selected under two tags is acted on once. **Remove from Recent** only hides its history entry. To paste or drop on the background, select a destination folder or a file in that folder. If the selection points to several folders, or nothing is selected, Maxplorer asks you to choose a folder. Cancelling preserves the clipboard. Drop directly on a folder row to use that folder.
+You can copy, cut, rename, drag or move selected files to the Trash from either list. A file selected under two tags is acted on once. **Remove from Recent** only hides its history entry. To paste or drop on the background, select a destination folder or a file in that folder. If the selection points to several folders, or nothing is selected, Orchard Explorer asks you to choose a folder. Cancelling preserves the clipboard. Drop directly on a folder row to use that folder.
 
-When a drag needs the folder chooser, Maxplorer shows a copy badge and copies the files. Hold Command while dropping a selection dragged from Maxplorer to request a move.
+When a drag needs the folder chooser, Orchard Explorer shows a copy badge and copies the files. Hold Command while dropping a selection dragged from Orchard Explorer to request a move.
 
 Check **All tagged** in More tags to add its shortcut and make the all-items preview your default. It includes up to 500 distinct tagged items. Uncheck it to return to your saved named groups. If you clear every checkbox, More tags stays available. The colored dots follow Finder’s palette, and a hollow dot means the tag has no color. The picker includes configured Finder tags even when they have no indexed items.
 
 To apply tags, select one or more files or folders, right-click and choose **Tags…**. Choose an existing name or type a new one and select **Create**. A mixed checkbox means some of the selected items have the tag. Choose **Apply** to save your changes. The same assignments appear in Finder.
 
-**Home → Recent** shows up to 100 documents, newest first. It combines successful Maxplorer opens with documents that Spotlight reports used in the last 90 days. Items outside the index can still appear when opened through Maxplorer. **Remove from Recent** hides an entry until a later open.
+**Home → Recent** shows up to 100 documents, newest first. It combines successful Orchard Explorer opens with documents that Spotlight reports used in the last 90 days. Items outside the index can still appear when opened through Orchard Explorer. **Remove from Recent** hides an entry until a later open.
 
 ## Views, Preview and Properties
 
@@ -45,11 +45,11 @@ Choose Light, Dark or Follow System under **View**. **Interface Size** scales th
 
 Use **New** to create a folder, shortcut, bitmap image, text document or ZIP. **⌘⇧N** creates a folder. To rename one item, select it and press **F2**. **Return** commits and **Esc** cancels. If the new name is occupied, choose another name.
 
-Copy with **⌘C** and paste with **⌘V**, including between Finder and Maxplorer. To move, use **⌘X** then **⌘V**, or Copy followed by **Move Here (⌘⌥V)**. After a refused or cancelled move, issue Copy or Cut again. Dragging physical files inside Maxplorer moves by default. Hold **Option** to copy. Incoming external drags copy.
+Copy with **⌘C** and paste with **⌘V**, including between Finder and Orchard Explorer. To move, use **⌘X** then **⌘V**, or Copy followed by **Move Here (⌘⌥V)**. After a refused or cancelled move, issue Copy or Cut again. Dragging physical files inside Orchard Explorer moves by default. Hold **Option** to copy. Incoming external drags copy.
 
 When a transfer finds a conflict, the dialog offers the choices supported for that item, such as Skip, Keep Both or Replace. Cancelling a batch keeps items already completed. If a folder becomes unavailable, its listing is dimmed until you can refresh it successfully.
 
-With the file list focused, **Delete**, **Forward Delete** and **⌘Delete** move physical items to Trash. **File → Recently Trashed…** can restore verified items trashed by Maxplorer in this session. Supply a new name if the original is occupied. **⌘Z** and **⌘⇧Z** undo and redo the last verified physical rename in the current window.
+With the file list focused, **Delete**, **Forward Delete** and **⌘Delete** move physical items to Trash. **File → Recently Trashed…** can restore verified items trashed by Orchard Explorer in this session. Supply a new name if the original is occupied. **⌘Z** and **⌘⇧Z** undo and redo the last verified physical rename in the current window.
 
 ## Cloud files and OneDrive
 
@@ -60,26 +60,36 @@ Pinning a folder to Quick Access adds a sidebar shortcut. To keep a file’s con
 | Green outlined check | The visible file has local contents. |
 | White check on a solid green disk | The visible file has local contents and OneDrive confirmed **Always Keep on This Device**. |
 | Blue cloud | The visible file is online-only. A small pin beside the cloud means OneDrive also confirmed **Always Keep on This Device**. |
-| Question mark | Maxplorer recognizes the cloud file and is still missing a reliable observation of its local contents. A pin with a question mark means OneDrive confirmed **Always Keep on This Device** while local availability is unknown. |
+| Question mark | Orchard Explorer recognizes the cloud file and is still missing a reliable observation of its local contents. A pin with a question mark means OneDrive confirmed **Always Keep on This Device** while local availability is unknown. |
 | Small clock beside a badge | OneDrive previously confirmed a pin. The main badge shows the current local availability while the keep setting awaits verification. |
 
 Hover over a badge or read its accessibility value for the keep setting and any verification failure. Help includes the last successful check time when available. The spinner identifies an active download. A resident file may still be uploading.
 
-For an eligible single online-only file, choose **Download** in the context menu to fetch a local copy. Download leaves the pin setting alone. Maxplorer accepts files up to 1 GiB and waits up to 120 seconds. The provider may continue after you stop waiting.
+For an eligible single online-only file, choose **Download** in the context menu to fetch a local copy. Download leaves the pin setting alone. Orchard Explorer accepts files up to 1 GiB and waits up to 120 seconds. The provider may continue after you stop waiting.
 
 For a single supported file in a OneDrive account under `~/Library/CloudStorage`, **Always Keep on This Device** pins the file. **Free Up Space** asks OneDrive to remove its local copy. Both commands work while the verified OneDrive client is running. Close Preview or finish an active download for the target if its command is unavailable.
 
-If OneDrive clears the pin while the file is still in use, Maxplorer reports that removal may finish in the background. While the row is visible and the notice is open, Maxplorer can update the badge and notice when it observes that removal has finished. The cloud copy remains available. Folders, mixed selections and search results do not offer retention commands.
+If OneDrive clears the pin while the file is still in use, Orchard Explorer reports that removal may finish in the background. While the row is visible and the notice is open, Orchard Explorer can update the badge and notice when it observes that removal has finished. The cloud copy remains available. Folders, mixed selections and search results do not offer retention commands.
 
 ## ZIP folders
 
 Open a ZIP to browse its contents. To extract selected files or folders, copy them and paste into a physical folder. To add local items, copy them and paste inside the archive. You can also cut, rename and permanently delete supported entries. ZIP deletion requires confirmation and has no Trash recovery. Use a physical folder as an intermediate location when transferring between ZIPs.
 
-Opening a member in another app creates a read-only temporary copy. To keep edits, save a separate file and add it back to the archive. Maxplorer retains edited temporary copies and reports them. Protected `__MACOSX` metadata companions move with the associated item. Unsupported compression, encrypted members and unsafe names produce an error. Refresh the listing after another app changes the archive.
+Opening a member in another app creates a read-only temporary copy. To keep edits, save a separate file and add it back to the archive. Orchard Explorer retains edited temporary copies and reports them. Protected `__MACOSX` metadata companions move with the associated item. Unsupported compression, encrypted members and unsafe names produce an error. Refresh the listing after another app changes the archive.
 
-## Use Maxplorer for “Show in Finder”
+## Upgrading from Maxplorer
 
-Some apps send a system request to reveal a file. Install Maxplorer in `/Applications` to use it for those requests. If you already use another viewer, record its setting with `defaults read -g NSFileViewer` before running this command in Terminal.
+The two apps share the bundle identifier `dev.native-explorer.app`. The renamed app uses your existing preferences, pins, and retained ZIP edits.
+
+1. Finish ongoing file operations and quit Maxplorer. In Finder, compress `Maxplorer.app` to a ZIP backup and retain it. A ZIP backup keeps the old app available for rollback without presenting macOS with two file viewers that have the same identifier.
+2. Remove the old, unpacked bundle from installed locations before opening the new one. Check your previous source checkout as well as Applications for loose builds in `app/dist`. Leave your preferences and Application Support files in place.
+3. Move `Orchard Explorer.app` into Applications. Open it and check a familiar pin or folder. If you previously configured **Show in Finder** for Maxplorer, the same setting applies. Use another app's reveal command on a known file and confirm Orchard Explorer selects it. If you previously granted Full Disk Access and a location is inaccessible, check the entry for the renamed app in **System Settings → Privacy & Security → Full Disk Access**.
+
+To roll back, quit Orchard Explorer, remove the unpacked renamed bundle from installed locations, and restore the archived Maxplorer bundle to Applications. Both versions use the same user data.
+
+## Use Orchard Explorer for “Show in Finder”
+
+Some apps send a system request to reveal a file. Install Orchard Explorer in `/Applications` to use it for those requests. If you already use another viewer, record its setting with `defaults read -g NSFileViewer` before running this command in Terminal.
 
 ```sh
 defaults write -g NSFileViewer -string dev.native-explorer.app
@@ -89,4 +99,4 @@ A reveal selects the file in its containing folder. Apps that control Finder dir
 
 ## File access
 
-**Maxplorer → File Access…** shows the running app’s location and explains macOS Full Disk Access. **Choose Folder to Check** tries to list a folder you select. A successful check confirms read access there. macOS still enforces filesystem permissions and read-only volumes. When reporting a problem, include your macOS version, the type of location and the exact message.
+**Orchard Explorer → File Access…** shows the running app’s location and explains macOS Full Disk Access. **Choose Folder to Check** tries to list a folder you select. A successful check confirms read access there. macOS still enforces filesystem permissions and read-only volumes. When reporting a problem, include your macOS version, the type of location and the exact message.

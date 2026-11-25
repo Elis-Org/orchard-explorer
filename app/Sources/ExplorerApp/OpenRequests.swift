@@ -1,10 +1,10 @@
 import ExplorerCore
 import Foundation
 
-/// MAC-082 — requests from other applications to open items in Maxplorer.
+/// MAC-082 — requests from other applications to open items in Orchard Explorer.
 ///
-/// macOS delivers "open these items" to the app for `open -a Maxplorer …`, for the
-/// Open With menu and, when `NSFileViewer` names Maxplorer, for other apps' "Show in
+/// macOS delivers "open these items" to the app for `open -a "Orchard Explorer" …`, for the
+/// Open With menu and, when `NSFileViewer` names Orchard Explorer, for other apps' "Show in
 /// Finder" (observed as an ordinary open request carrying the item). A file manager
 /// shows items rather than opening them in another application:
 /// - a folder (not a package) opens in its own tab;
@@ -62,7 +62,7 @@ struct OpenRequestPlan: Equatable {
         return OpenRequestPlan(targets: targets)
     }
 
-    /// A folder Maxplorer navigates into: a directory that is not a package. A link
+    /// A folder Orchard Explorer navigates into: a directory that is not a package. A link
     /// to such a folder opens it too; the tab keeps the requested (link) path.
     static func isOpenableFolder(_ url: URL) -> Bool {
         let keys: Set<URLResourceKey> = [.isDirectoryKey, .isPackageKey, .isSymbolicLinkKey]

@@ -58,7 +58,7 @@ enum ArchivePasteRefusal: Equatable {
         case .archiveOrigin:
             return "Direct ZIP-to-ZIP transfers aren't available. Copy the contents to an ordinary folder first."
         case .unverifiedPrivateToken:
-            return "Copy the files again before adding them to a ZIP. Maxplorer can’t verify this clipboard selection."
+            return "Copy the files again before adding them to a ZIP. \(AppIdentity.name) can’t verify this clipboard selection."
         case .managedExport:
             return "Direct ZIP-to-ZIP transfers aren't available, including exported ZIP clipboard files."
         }

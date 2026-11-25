@@ -91,7 +91,7 @@ struct ItemReveal: Equatable {
         ItemReveal(entries: [Entry(url: url, identity: identity)],
                    missingNotice: "The search result is no longer in this folder.")
     }
-    /// Items another application asked Maxplorer to show (MAC-082).
+    /// Items another application asked Orchard Explorer to show (MAC-082).
     static func requested(_ urls: [URL], identities: [String: LocalFileIdentity] = [:]) -> ItemReveal {
         ItemReveal(entries: urls.map { Entry(url: $0, identity: identities[$0.path], requiresPath: false) },
                    missingNotice: urls.count == 1
@@ -2641,7 +2641,7 @@ final class ExplorerStore: ObservableObject {
                 }
                 leases.removeAll() // clipboard is now the sole cleanup owner
                 self.operationNotice = kind == .move
-                    ? "Ready to move in Maxplorer. Pasting in another app copies the exported files and leaves the ZIP originals."
+                    ? "Ready to move in \(AppIdentity.name). Pasting in another app copies the exported files and leaves the ZIP originals."
                     : "ZIP contents copied to the clipboard."
                 self.finishTransferSession(sessionID)
             } catch {

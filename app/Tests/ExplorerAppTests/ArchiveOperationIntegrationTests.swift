@@ -436,7 +436,7 @@ struct ArchiveOperationIntegrationTests {
             #expect(store.canPaste)
             #expect(store.canMoveHere)
             if moving { store.moveHere() } else { store.pasteSelection() }
-            #expect(store.operationNotice == "Copy the files again before adding them to a ZIP. Maxplorer can’t verify this clipboard selection.")
+            #expect(store.operationNotice == "Copy the files again before adding them to a ZIP. \(AppIdentity.name) can’t verify this clipboard selection.")
             #expect(store.transfer == nil && !store.isPerformingOperation)
             #expect(try Data(contentsOf: archive) == original)
             #expect(try Data(contentsOf: sourceURL) == originalSource)

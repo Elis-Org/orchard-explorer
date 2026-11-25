@@ -8,13 +8,14 @@ if [[ "$configuration" != debug && "$configuration" != release ]]; then
 fi
 swift build --build-system native --arch arm64 -c "$configuration"
 binary_dir="$(swift build --build-system native --arch arm64 -c "$configuration" --show-bin-path)"
-# MAC-080: the app is presented as Maxplorer; the SwiftPM product keeps its name.
-bundle="dist/Maxplorer.app"
+app_name="Orchard Explorer"
+bundle="dist/$app_name.app"
 rm -rf "$bundle"
 mkdir -p "$bundle/Contents/MacOS" "$bundle/Contents/Resources"
-cp "$binary_dir/Explorer" "$bundle/Contents/MacOS/Maxplorer"
+cp "$binary_dir/Explorer" "$bundle/Contents/MacOS/$app_name"
 cp Resources/Info.plist "$bundle/Contents/Info.plist"
 cp Resources/AppIcon.icns "$bundle/Contents/Resources/AppIcon.icns"
+cp ../LICENSE "$bundle/Contents/Resources/LICENSE"
 cp -R ThirdPartyNotices "$bundle/Contents/Resources/ThirdPartyNotices"
 codesign --force --sign - "$bundle"
 echo "Built $PWD/$bundle"

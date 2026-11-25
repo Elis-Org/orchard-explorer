@@ -3,19 +3,20 @@ import Foundation
 import Testing
 @testable import ExplorerApp
 
-/// MAC-080/081: the bundle presents Maxplorer with its own icon, while the bundle
+/// MAC-080/081: the bundle presents Orchard Explorer with its own icon, while the bundle
 /// identifier stays unchanged so existing preferences and pins carry over.
 @Suite struct AppIdentityTests {
     private static let resources = URL(fileURLWithPath: #filePath)
         .deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent()
         .appendingPathComponent("Resources", isDirectory: true)
 
-    @Test func infoPlistPresentsMaxplorerAndKeepsTheBundleIdentifier() throws {
+    @Test func infoPlistPresentsOrchardExplorerAndKeepsTheBundleIdentifier() throws {
         let data = try Data(contentsOf: Self.resources.appendingPathComponent("Info.plist"))
         let plist = try #require(try PropertyListSerialization.propertyList(from: data, format: nil) as? [String: Any])
+        #expect(AppIdentity.name == "Orchard Explorer")
         #expect(plist["CFBundleName"] as? String == AppIdentity.name)
         #expect(plist["CFBundleDisplayName"] as? String == AppIdentity.name)
-        #expect(plist["CFBundleExecutable"] as? String == "Maxplorer")
+        #expect(plist["CFBundleExecutable"] as? String == AppIdentity.name)
         #expect(plist["CFBundleIconFile"] as? String == "AppIcon")
         #expect(plist["CFBundleIdentifier"] as? String == "dev.native-explorer.app", "unchanged: preferences and pins carry over")
     }

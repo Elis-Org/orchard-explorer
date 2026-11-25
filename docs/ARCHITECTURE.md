@@ -1,6 +1,6 @@
-# How Maxplorer is organized
+# How Orchard Explorer is organized
 
-Maxplorer is a Swift package with two production targets. `ExplorerCore` owns filesystem access and data models. The `ExplorerApp` executable combines SwiftUI window content with AppKit controls for the file list, keyboard focus, menus and macOS application integration. SwiftPM builds the executable as `Explorer`; the build script packages it as `Maxplorer.app`. [Package definition](../app/Package.swift)
+Orchard Explorer is a Swift package with two production targets. `ExplorerCore` owns filesystem access and data models. The `ExplorerApp` executable combines SwiftUI window content with AppKit controls for the file list, keyboard focus, menus and macOS application integration. SwiftPM builds the executable as `Explorer`; the build script packages it as `Orchard Explorer.app`. [Package definition](../app/Package.swift)
 
 ## Source map
 

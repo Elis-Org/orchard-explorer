@@ -153,7 +153,7 @@ struct ExplorerShell: View {
                 else if let confirmation = store.recentOpenConfirmation {
                     VStack(alignment: .leading, spacing: 14.pt) {
                         Text("Open the file currently at this location?").font(.system(size: 15.pt, weight: .semibold))
-                        Text("Maxplorer could not verify this is the document you opened before. Opening the current file will update Recent.")
+                        Text("\(AppIdentity.name) could not verify this is the document you opened before. Opening the current file will update Recent.")
                             .fixedSize(horizontal: false, vertical: true)
                         Text(confirmation.candidate.url.path).lineLimit(3).truncationMode(.middle)
                         HStack {
