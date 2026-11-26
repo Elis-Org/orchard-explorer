@@ -77,16 +77,6 @@ Open a ZIP to browse its contents. To extract selected files or folders, copy th
 
 Opening a member in another app creates a read-only temporary copy. To keep edits, save a separate file and add it back to the archive. Orchard Explorer retains edited temporary copies and reports them. Protected `__MACOSX` metadata companions move with the associated item. Unsupported compression, encrypted members and unsafe names produce an error. Refresh the listing after another app changes the archive.
 
-## Upgrading from Maxplorer
-
-The two apps share the bundle identifier `dev.native-explorer.app`. The renamed app uses your existing preferences, pins, and retained ZIP edits.
-
-1. Finish ongoing file operations and quit Maxplorer. In Finder, compress `Maxplorer.app` to a ZIP backup and retain it. A ZIP backup keeps the old app available for rollback without presenting macOS with two file viewers that have the same identifier.
-2. Remove the old, unpacked bundle from installed locations before opening the new one. Check your previous source checkout as well as Applications for loose builds in `app/dist`. Leave your preferences and Application Support files in place.
-3. Move `Orchard Explorer.app` into Applications. Open it and check a familiar pin or folder. If you previously configured **Show in Finder** for Maxplorer, the same setting applies. Use another app's reveal command on a known file and confirm Orchard Explorer selects it. If you previously granted Full Disk Access and a location is inaccessible, check the entry for the renamed app in **System Settings → Privacy & Security → Full Disk Access**.
-
-To roll back, quit Orchard Explorer, remove the unpacked renamed bundle from installed locations, and restore the archived Maxplorer bundle to Applications. Both versions use the same user data.
-
 ## Use Orchard Explorer for “Show in Finder”
 
 Some apps send a system request to reveal a file. Install Orchard Explorer in `/Applications` to use it for those requests. If you already use another viewer, record its setting with `defaults read -g NSFileViewer` before running this command in Terminal.

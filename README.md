@@ -1,32 +1,25 @@
 # Orchard Explorer
 
-Orchard Explorer is a native Mac file manager for people who feel at home in Windows File Explorer. Open several folders in tabs, browse ZIP archives like folders, and use Finder tags to find files across locations. Home brings together your pinned folders, tags, and recent documents.
+Orchard Explorer is a native macOS file manager for people who like the way Windows File Explorer works. Browse folders in tabs, sort files in Details view, and press **F2** to rename a file. Your Finder tags and OneDrive files are available in the same window.
 
-## Build and open
+**[Build and install Orchard Explorer](docs/INSTALL.md)** on an Apple silicon Mac running macOS 26.7.1 or later.
 
-Use an Apple Silicon Mac running macOS 26.7.1 or later with Git and the Xcode Command Line Tools. The project has been built with Swift 6.4. The first build uses the network to fetch the pinned ZIPFoundation dependency.
+## Get started
 
-If you already use Maxplorer, read [Upgrading from Maxplorer](docs/USAGE.md#upgrading-from-maxplorer) before building or launching Orchard Explorer. The two versions share a bundle identifier.
+1. **Open a folder.** Launch Orchard Explorer from Applications. It opens on **Home**, where you’ll find Quick access and recent documents. Choose a folder in the sidebar, or press **⌘L**, type `~/Downloads`, and press **Return**.
+2. **Work across two folders.** Press **⌘T** to open a second tab and navigate to a destination folder. To copy a file, select it in the first tab and press **⌘C**, then switch to the destination tab and press **⌘V**.
+3. **Keep a folder handy.** In a folder you visit often, choose **Go → Pin Current Folder to Quick Access**. Its shortcut stays in the sidebar the next time you open the app.
 
-Clone this repository and build from the checkout.
+## Features
 
-```sh
-bash app/build.sh release
-```
+- **Search by filename.** Press **⌘F** in a folder, enter a name, and press **Return**. Search just that folder or include its subfolders, then narrow the results by kind, date, or size.
+- **Choose how to see your files.** Use Details view to sort by a column, or switch to icons, a list, or tiles. Select a file and press **⌘⌥P** to preview a PDF, image, or text document alongside the folder.
+- **Organize with Finder tags.** Right-click files, choose **Tags…**, and apply a tag. **Home → Tags** brings together tagged files from different folders. The same tags appear in Finder.
+- **Browse ZIPs like folders.** Open an archive, copy the entries you need, and paste them into a regular folder to extract them. To add files to a ZIP, paste them inside the archive.
+- **Manage OneDrive storage.** Badges show which files are local or online-only. With OneDrive running, right-click a supported file and choose **Always Keep on This Device** to keep it offline or **Free Up Space** to release the local copy.
+- **Recover trashed files.** Choose **File → Recently Trashed…** to restore eligible items you sent to the Trash from Orchard Explorer during the current session.
 
-The build uses an ad-hoc signature. For a fresh installation, move `app/dist/Orchard Explorer.app` to Applications and open it there. To run a development build directly from its build folder, use `open "app/dist/Orchard Explorer.app"`.
-
-## Find your way around
-
-| To | In Orchard Explorer |
-| --- | --- |
-| Open a folder by path | Press **⌘L**, enter the path, and press **Return**. |
-| Open a second location | Press **⌘T** for a new Home tab, then choose a folder. |
-| Search for a filename | Press **⌘F** and choose whether to include subfolders. |
-| Extract part of a ZIP | Open the ZIP, copy the entries you want, and paste into a regular folder. |
-| Keep a OneDrive file offline | Right-click an eligible file and choose **Always Keep on This Device**. |
-
-For keyboard shortcuts, file recovery, cloud status, and setup for “Show in Finder,” see the [usage guide](docs/USAGE.md). For tests and pull requests, see [Contributing](CONTRIBUTING.md).
+The [usage guide](docs/USAGE.md) covers keyboard shortcuts, file operations, and how to make Orchard Explorer handle “Show in Finder” requests from other apps. To run tests or submit a change, see [Contributing](CONTRIBUTING.md).
 
 ## License
 

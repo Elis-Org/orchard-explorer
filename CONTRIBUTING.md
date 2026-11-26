@@ -1,6 +1,6 @@
 # Contributing to Orchard Explorer
 
-Build and test on an Apple Silicon Mac running macOS 26.7.1 or later. Install the Xcode Command Line Tools and run the commands below from the repository root. The first Swift package build fetches ZIPFoundation 0.9.20.
+For prerequisites and a release build, follow the [build and installation guide](docs/INSTALL.md). Run the test commands below from the repository root.
 
 ## Run the full test suite
 
